@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LoginForm from "./components/Login/LoginForm";
+import HomePage from "./components/HomePage/HomePage";
 const App = () => {
   const adminUser = {
     email: "admin@admin.com",
@@ -10,9 +11,12 @@ const App = () => {
   const [error, setError] = useState("");
 
   const Login = (details) => {
-    if (details.email == adminUser.email &&details.password == adminUser.password) {
+    if (
+      details.email == adminUser.email &&
+      details.password == adminUser.password
+    ) {
       console.log("Logged");
-      setUser({name: details.name,email: details.email,});
+      setUser({ name: details.name, email: details.email });
     } else {
       console.log("Not match");
       setError("Mail or Password is wrong");
@@ -26,12 +30,7 @@ const App = () => {
   return (
     <div className="App">
       {user.email != "" ? (
-        <div className="welcome">
-          <h2>
-            Welcome <span>{user.name}</span>
-          </h2>
-          <button onClick={Logout}>Logout</button>
-        </div>
+        <HomePage Logout={Logout} user={user} />
       ) : (
         <LoginForm Login={Login} error={error} />
       )}
