@@ -14,11 +14,36 @@
   position: relative;
   padding: 32px;
   width: 100%;
-  max-width: 640px;
-  background-color: #fff;
+  max-width: 400px;
+  height:400px;
+  background-color: #3E4AB7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center
 }
-.popup-inner.close-btn {
+.popup-inner .close-btn {
   position: absolute;
   top: 16px;
   right: 16px;
+}
+.inputPopup{
+  display: flex;
+  height: 8em;
+  width: 100%;
+  background:#3E4AB7;
+  border: 1px solid #39E035;
+}
+.submitPopup{
+  margin-top:20px;
+  align-self: flex-end;
+  border:none;
+  background:#39E035;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 7px;
+
+}
+.d-none{
+  display:none;
 }

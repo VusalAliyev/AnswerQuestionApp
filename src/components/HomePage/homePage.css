@@ -8,7 +8,34 @@
     margin:auto;
     display: flex;
     justify-content: space-between;
+    position:fixed;
+    margin: 0 10%;
 }
 p{
     color:white
 }
+.askHome{
+    background:#39E035;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border:none;
+}
+.logout{
+    background:#39E035;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 7px;
+    border:none;
+}
+.questionBox{
+    width: 40%;
+    height: 200px;
+    margin: auto;
+    padding-top: 200px;
+}
+.questionBox-inner{
+    margin: 10px;
+    border:1px solid white
+}
+
